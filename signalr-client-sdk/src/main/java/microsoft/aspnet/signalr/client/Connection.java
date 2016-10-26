@@ -20,6 +20,7 @@ import microsoft.aspnet.signalr.client.transport.AutomaticTransport;
 import microsoft.aspnet.signalr.client.transport.ClientTransport;
 import microsoft.aspnet.signalr.client.transport.ConnectionType;
 import microsoft.aspnet.signalr.client.transport.DataResultCallback;
+import microsoft.aspnet.signalr.client.transport.LongPollingTransport;
 import microsoft.aspnet.signalr.client.transport.NegotiationResponse;
 import microsoft.aspnet.signalr.client.transport.TransportHelper;
 import microsoft.aspnet.signalr.client.Logger;
@@ -259,7 +260,7 @@ public class Connection implements ConnectionBase {
      * @return A Future for the operation
      */
     public SignalRFuture<Void> start() {
-        return start(new AutomaticTransport(mLogger));
+        return start(new LongPollingTransport(mLogger));
     }
 
     /**
