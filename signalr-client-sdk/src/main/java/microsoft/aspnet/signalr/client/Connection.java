@@ -657,14 +657,14 @@ public class Connection implements ConnectionBase {
                 }
             });
 
-            mHeartbeatMonitor.setOnTimeout(new Runnable() {
-
-                @Override
-                public void run() {
-                    log("Timeout", LogLevel.Information);
-                    reconnect();
-                }
-            });
+//            mHeartbeatMonitor.setOnTimeout(new Runnable() {
+//
+//                @Override
+//                public void run() {
+//                    log("Timeout", LogLevel.Information);
+//                    reconnect();
+//                }
+//            });
 
             final Connection that = this;
 
